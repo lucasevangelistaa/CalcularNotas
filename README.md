@@ -1,2 +1,2 @@
 # CalcularNotas
- Calculadora de Notas
+Aplicativo Calculadora de Notas
