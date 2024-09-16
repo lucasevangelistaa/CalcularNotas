@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:title="Calculadora de Notas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- EditText para notas -->
+    <EditText
+        android:id="@+id/nota1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nota 1"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:id="@+id/nota2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nota 2"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/nota1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:id="@+id/nota3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nota 3"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/nota2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:id="@+id/nota4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nota 4"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/nota3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- RadioButton para mostrar a situação -->
+    <RadioButton
+        android:id="@+id/aprovadoRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aprovado"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/nota4"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <RadioButton
+        android:id="@+id/recuperacaoRadioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuperação"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/nota4"
+        app:layout_constraintStart_toEndOf="@id/aprovadoRadioButton"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Botão para calcular a média -->
+    <Button
+        android:id="@+id/calcularButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        app:layout_constraintTop_toBottomOf="@id/recuperacaoRadioButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:background="@color/white"
+        android:backgroundTint="#FFFFFF"
+        android:text="CALCULADORA DE NOTAS"
+        tools:layout_editor_absoluteX="122dp"
+        tools:layout_editor_absoluteY="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
